@@ -1,34 +1,20 @@
-import { ThemeProvider, createTheme, CssBaseline } from '@mui/material';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-
-const theme = createTheme({
-  palette: {
-    mode: 'dark',
-    primary: {
-      main: '#2196f3',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-    background: {
-      default: '#121212',
-      paper: '#1e1e1e',
-    },
-  },
-});
+import './App.css'
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Router>
-        <Navbar />
-        <Home />
-      </Router>
-    </ThemeProvider>
-  );
+    <div className="App">
+      <header className="App-header">
+        <h1>ERLC Server Dashboard</h1>
+        <p>Welcome to our server management system</p>
+      </header>
+      <main>
+        <section className="info-section">
+          <h2>Server Status</h2>
+          <p>Coming soon...</p>
+        </section>
+      </main>
+    </div>
+  )
 }
 
-export default App;
+export default App

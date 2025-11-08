@@ -1,0 +1,16 @@
+{
+  "name": "clearwater",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "website/frontend",
+    "website/backend"
+  ],
+  "scripts": {
+    "start:frontend": "cd website/frontend && npm start",
+    "start:backend": "cd website/backend && python app.py",
+    "build:frontend": "cd website/frontend && npm run build",
+    "install:backend": "cd website/backend && pip install -r requirements.txt",
+    "postinstall": "npm run install:backend"
+  }
+}

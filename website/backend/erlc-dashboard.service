@@ -1,0 +1,13 @@
+[Unit]
+Description=ERLC Dashboard Backend
+After=network.target
+
+[Service]
+User=www-data
+WorkingDirectory=/var/www/erlc-dashboard/backend
+Environment="PATH=/var/www/erlc-dashboard/backend/venv/bin"
+ExecStart=/var/www/erlc-dashboard/backend/venv/bin/gunicorn -c gunicorn.conf.py app:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
